@@ -1,0 +1,24 @@
+; Demo / dev project for Crafting — Lite.
+
+config_version=5
+
+[application]
+
+config/name="Crafting — Lite — Demo"
+config/description="Free shapeless instant-craft recipes for Godot 4.3+."
+config/features=PackedStringArray("4.3", "GL Compatibility")
+run/main_scene="res://demo/crafting_demo.tscn"
+
+[display]
+
+window/size/viewport_width=900
+window/size/viewport_height=520
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/crafting_lite/plugin.cfg")
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
