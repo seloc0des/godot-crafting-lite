@@ -1,5 +1,7 @@
 # Crafting — Lite
 
+> **New since 1.0.0:** a no-code authoring dock (create, edit, duplicate and delete `RecipeLite` recipes from an editor panel) and a one-click **Setup** tab that drops a working component into your scene. Details in CHANGELOG.md.
+
 **FREE.** Shapeless instant-craft recipes for Godot 4.3+. Pure GDScript. MIT.
 
 The working core of the [CindieForge Crafting addon](docs/upgrade.md). Define recipes with inputs and outputs. Bind to an inventory. Call `craft(recipe)`.

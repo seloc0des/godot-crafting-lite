@@ -78,7 +78,7 @@ func _build_ui() -> void:
 	add_child(layer)
 
 	var title := Label.new()
-	title.text = "Crafting — Lite — Demo"
+	title.text = "Crafting (Lite) · Demo"
 	title.position = Vector2(16, 12)
 	title.add_theme_font_size_override("font_size", 16)
 	layer.add_child(title)
@@ -144,7 +144,7 @@ func _refresh() -> void:
 		var outs_text: Array = []
 		for outp in r.outputs:
 			outs_text.append("%dx %s" % [int(outp.count), String(outp.item.name)])
-		name_label.text = "%s — %s → %s" % [String(r.title), ", ".join(ins_text), ", ".join(outs_text)]
+		name_label.text = "%s: %s → %s" % [String(r.title), ", ".join(ins_text), ", ".join(outs_text)]
 		name_label.add_theme_font_size_override("font_size", 12)
 		name_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		row.add_child(name_label)
