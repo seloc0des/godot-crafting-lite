@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.3.0 (2026-08-22)
+
+- Engine floor moves to Godot 4.5. The project and the plugin description both
+  said 4.3 before, which no longer matched the code.
+- The addon and its docs now say selodev throughout. The old CindieForge name
+  was still in the README and the upgrade notes after the rebrand.
+
 ## 1.2.0 — 2026-07-24
 
 One-click no-code setup.

@@ -1,8 +1,8 @@
 # Crafting — Lite
 
-**FREE.** Shapeless instant-craft recipes for Godot 4.3+. Pure GDScript. MIT.
+**FREE.** Shapeless instant-craft recipes for Godot 4.5+. Pure GDScript. MIT.
 
-The working core of the [CindieForge Crafting addon](docs/upgrade.md). Define recipes with inputs and outputs. Bind to an inventory. Call `craft(recipe)`.
+The working core of the [selodev Crafting addon](docs/upgrade.md). Define recipes with inputs and outputs. Bind to an inventory. Call `craft(recipe)`.
 
 ## 5-minute install
 
