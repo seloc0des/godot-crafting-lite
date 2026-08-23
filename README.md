@@ -1,16 +1,20 @@
-# Crafting — Lite
+# Crafting (Lite)
 
-> **New since 1.0.0:** a no-code authoring dock (create, edit, duplicate and delete `RecipeLite` recipes from an editor panel) and a one-click **Setup** tab that drops a working component into your scene. Details in CHANGELOG.md.
+**FREE.** Shapeless instant-craft recipes for Godot 4.5+. Pure GDScript. MIT.
 
-**FREE.** Shapeless instant-craft recipes for Godot 4.3+. Pure GDScript. MIT.
+The working core of the [selodev Crafting addon](docs/upgrade.md). Define recipes with inputs and outputs. Bind to an inventory. Call `craft(recipe)`.
 
-The working core of the [CindieForge Crafting addon](docs/upgrade.md). Define recipes with inputs and outputs. Bind to an inventory. Call `craft(recipe)`.
+> **New in v1.1 — no-code dock.** Enable the plugin and an authoring panel appears: create, edit, duplicate, and delete your resources in a UI, no Inspector or `.tres` editing. (The Pro tier adds every field, one-click scene wiring, and the `EventTrigger` node.)
+
+## One-click setup (no code)
+
+Enable the plugin and a **Crafting · Setup** tab appears in the editor. Pick the outcome you want and press **Apply** — the Lite component is added to your scene, baked in and editable. *(Pro unlocks the full no-code wiring — gameplay triggers, bound UI, cross-system hooks.)*
 
 ## 5-minute install
 
 1. Copy `addons/crafting_lite/` into your project's `addons/` folder.
-2. Project → Project Settings → Plugins → enable **Crafting — Lite**.
-3. Drop a `CraftingLite` Node. Bind it to a bag with `has_item / remove_item / add_item` (Inventory — Lite or your own).
+2. Project → Project Settings → Plugins → enable **Crafting (Lite)**.
+3. Drop a `CraftingLite` Node. Bind it to a bag with `has_item / remove_item / add_item` (Inventory (Lite) or your own).
 4. Create `RecipeLite` Resources. Each has `inputs` and `outputs` arrays of `{item, count}` dictionaries.
 5. `crafting.craft(recipe)` — instant, no UI required.
 
@@ -45,7 +49,6 @@ See [docs/upgrade.md](docs/upgrade.md).
 ## License
 
 MIT.
-
 
 ---
 
