@@ -4,11 +4,6 @@ const DemoBag := preload("res://addons/crafting_lite/_demo_bag.gd")
 const CraftingLiteScript := preload("res://addons/crafting_lite/crafting_lite.gd")
 const RecipeLiteScript := preload("res://addons/crafting_lite/recipe.gd")
 
-# A trivial in-script item type so this demo runs without other Lite addons installed.
-class _Item extends Resource:
-	var id: String = ""
-	var name: String = ""
-
 var _bag: Node
 var _crafting: CraftingLite
 var _items: Dictionary = {}
@@ -23,13 +18,13 @@ func _ready() -> void:
 	bg.anchor_right = 1; bg.anchor_bottom = 1
 	add_child(bg)
 
-	# Items.
-	_items["wood"]   = _make_item("wood", "Wood")
-	_items["stone"]  = _make_item("stone", "Stone")
-	_items["iron"]   = _make_item("iron", "Iron Ingot")
-	_items["stick"]  = _make_item("stick", "Stick")
-	_items["pickaxe"] = _make_item("pickaxe", "Iron Pickaxe")
-	_items["sword"]  = _make_item("sword", "Iron Sword")
+	# Items: the same files the Recipes (Lite) tab offers as examples.
+	_items["wood"]   = load("res://demo/items/wood.tres")
+	_items["stone"]  = load("res://demo/items/stone.tres")
+	_items["iron"]   = load("res://demo/items/iron_ingot.tres")
+	_items["stick"]  = load("res://demo/items/stick.tres")
+	_items["pickaxe"] = load("res://demo/items/iron_pickaxe.tres")
+	_items["sword"]  = load("res://demo/items/iron_sword.tres")
 
 	# Bag.
 	_bag = DemoBag.new()
@@ -58,12 +53,6 @@ func _ready() -> void:
 
 	_build_ui()
 	_refresh()
-
-
-func _make_item(id_: String, name_: String) -> Resource:
-	var it := _Item.new()
-	it.id = id_; it.name = name_
-	return it
 
 
 func _recipe(id_: String, title: String, ins: Array, outs: Array) -> RecipeLite:
