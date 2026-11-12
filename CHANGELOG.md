@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.4.4 (2026-10-24)
+
+The crafting panel gives you the mouse in a third-person game.
+
+- **Opening the crafting panel frees the mouse in a third-person game.** The orbit camera from
+  Controller (Pro) 1.6.0, which holds the mouse for looking around, now lets go of it while the
+  panel is on screen, so you can click Craft. When you close the panel, the next click in the game
+  takes the mouse back. Nothing to set up, and games without that camera behave as before.
+
 ## 1.4.3 (2026-10-12)
 
 The tabs show their names on Godot 4.5.
