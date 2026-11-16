@@ -12,14 +12,15 @@
 - **Save-contract auto-join.** Queue state, unlock state, XP all persist.
 - **Shared `Events` autoload.** `craft_started`, `craft_completed`, `craft_failed`, `recipe_unlocked` flow to Quests for "craft N of X" objectives.
 
-## Migration from Lite
+## Moving from Lite
 
-`RecipeLite.inputs` / `outputs` use the same `{item, count}` shape. `CraftingLite.craft(recipe)` carries over. The shaped grid is a superset of the shapeless model — your Lite recipes work as-is in Pro.
+The full version installs next to the Lite, in its own folder, and both run in the same project, so you can move over one piece at a time. It isn't a drop-in replacement: the class names differ, and so do some method names.
+
+`CraftingLite` becomes `CraftingComponent`. `can_craft` and `craft` keep their names. `add_recipe`, `bind_inventory` and `block_reason` don't exist in the full version. Your `RecipeLite.tres` files stay Lite resources, so re-create them as the full `Recipe`. `id`, `icon`, `inputs` and `outputs` have the same names, and the Lite's `title` is called `name`.
 
 ## Where to buy
 
-The full version is on itch.io — **https://selodev.itch.io**. Both tiers share the
-same field names and method signatures, so upgrading is a class-name swap.
+The full version is on itch.io: **https://selodev.itch.io**.
 
 ## License
 
