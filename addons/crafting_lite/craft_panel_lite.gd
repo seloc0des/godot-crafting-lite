@@ -6,7 +6,7 @@ extends Control
 # Setup tab points area_path at the bench's CraftArea, so it opens when the player
 # walks up and closes when they leave (or press Close). Crafting anywhere uses
 # toggle_action instead (B). The bag is found on the "player" group's node.
-# Crafting (Pro) has the styled CraftingUI: icons, timed crafts, a queue.
+# The full Crafting has the styled CraftingUI: icons, timed crafts, a queue.
 
 ## The CraftingLite whose recipes this shows. The Setup tab fills it in.
 @export_node_path("Node") var crafting_path: NodePath

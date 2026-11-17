@@ -63,7 +63,7 @@ func _ready() -> void:
 	var on_hero = dock.wire_crafting(root, hero)
 	_assert(dock._host_of(on_hero, root) == hero, "a selected CraftingLite counts as the node it sits on, so the player tag never lands on the component")
 	_assert(not str(CHOOSER.OUTCOMES).contains("open-on-interact") and not str(CHOOSER.OUTCOMES).contains("opens from a button"),
-		"the Pro note no longer promises a trigger or a menu button Pro doesn't add")
+		"the full note no longer promises a trigger or a menu button the full version doesn't add")
 	_assert(not dock.tag_player(root, root) and not root.is_in_group("player"), "a plain scene root isn't tagged as the player")
 
 	# SCENE ROOT scope — targeting root itself finds/creates a root-owned component
@@ -252,7 +252,7 @@ func _dock_ui_checks() -> void:
 	_assert(mk != null and mk.tooltip_text == "Touch triggers, doors, zones and enemies only react to the node in the \"player\" group.",
 		"the Setup tab has the Make the selected node the player button, with its tooltip")
 	_assert(not text.contains("Inventory Path") and not str(CHOOSER.OUTCOMES).contains("unlocks no-code wiring") and str(CHOOSER.OUTCOMES).contains("styled recipe browser"),
-		"the notes no longer ask you to bind an inventory, and say what Pro adds")
+		"the notes no longer ask you to bind an inventory, and say what the full version adds")
 	d.queue_free()
 
 

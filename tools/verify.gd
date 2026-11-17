@@ -166,7 +166,7 @@ func _run_no_inventory_rejected() -> void:
 	comp.queue_free()
 
 
-# Regression: the `craft_completed` alias was added to align Lite with Pro
+# Regression: the `craft_completed` alias was added to align Lite with the full version
 # (which uses `craft_completed` exclusively). Both names must continue to
 # fire so existing Lite consumers don't break.
 func _run_craft_completed_alias() -> void:

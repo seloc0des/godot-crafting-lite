@@ -5,7 +5,7 @@ extends Node
 # `has_item(item, n)`, `remove_item(item, n)`, `add_item(item, n)`. Pair with
 # Inventory — Lite for the smoothest experience.
 #
-# Cut from Pro:
+# Not in the Lite:
 #   * Shaped (grid) recipes
 #   * Timed crafting (per-recipe duration)
 #   * Multi-slot craft queue
@@ -16,7 +16,7 @@ extends Node
 #   * Save-contract auto-join
 
 signal recipes_changed
-# Named `craft_completed` to match the Pro CraftingComponent signal so Lite→Pro
+# Named `craft_completed` to match the full CraftingComponent signal so Lite-to-full
 # upgrades don't have to rewrite every listener. The legacy `crafted` alias is
 # kept emitting in parallel so existing Lite consumers keep working.
 signal craft_completed(recipe: Resource, outputs: Array)

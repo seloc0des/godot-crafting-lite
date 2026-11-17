@@ -1,7 +1,7 @@
 @tool
 extends EditorPlugin
 
-# Ships a compact no-code authoring dock (the Pro tier adds full fields + wiring),
+# Ships a compact no-code authoring dock (the full version adds full fields + wiring),
 # fronted by a chooser: import → pick what crafting you want → Apply → baked in.
 
 const CHOOSER_SCRIPT := preload("res://addons/crafting_lite/editor/crafting_chooser_dock.gd")

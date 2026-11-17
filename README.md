@@ -4,7 +4,7 @@
 
 The working core of the [selodev Crafting addon](docs/upgrade.md). Define recipes with inputs and outputs, put crafting on a bench or on the player, and craft from a plain `CraftPanelLite` window.
 
-> **No-code dock.** Enable the plugin and a **Recipes (Lite)** authoring panel appears: create, edit, duplicate and delete your recipes in a UI, with rows for what each one needs and makes. (The Pro tier adds shaped grids, craft times, unlocks and the `EventTrigger` node.)
+> **No-code dock.** Enable the plugin and a **Recipes (Lite)** authoring panel appears: create, edit, duplicate and delete your recipes in a UI, with rows for what each one needs and makes. (The full version adds shaped grids, craft times, unlocks and the `EventTrigger` node.)
 
 ## One-click setup (no code)
 
@@ -48,14 +48,14 @@ Bind a bag with `bind_inventory` (or Inventory Path in the Inspector), or call `
 
 | Feature | Tier |
 |---|---|
-| Shaped (grid) recipes | Pro |
-| Per-recipe craft time + queue | Pro |
-| Recipe unlock progression | Pro |
-| Level requirement gating | Pro |
-| Station id gating (forge vs. cookpot) | Pro |
-| Styled `CraftingUI` with icons and progress bars, plus the `GridCraftingUI` bench | Pro |
-| Save-contract auto-join | Pro |
-| Shared `Events` autoload | Pro |
+| Shaped (grid) recipes | Full version |
+| Per-recipe craft time + queue | Full version |
+| Recipe unlock progression | Full version |
+| Level requirement gating | Full version |
+| Station id gating (forge vs. cookpot) | Full version |
+| Styled `CraftingUI` with icons and progress bars, plus the `GridCraftingUI` bench | Full version |
+| Save-contract auto-join | Full version |
+| Shared `Events` autoload | Full version |
 
 See [docs/upgrade.md](docs/upgrade.md).
 

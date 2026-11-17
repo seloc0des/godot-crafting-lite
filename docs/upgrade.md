@@ -1,6 +1,6 @@
-# Upgrade to Crafting (Pro)
+# Upgrade to the full Crafting
 
-## What Pro adds
+## What the full version adds
 
 - **Shaped (grid) recipes.** Author NxN patterns; the bench matches the player's grid arrangement.
 - **Timed crafting + queue.** Per-recipe `craft_time`, multi-slot queue with live progress bars.

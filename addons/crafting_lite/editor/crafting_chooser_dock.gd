@@ -9,7 +9,7 @@ extends Control
 #
 # Each outcome also adds a plain CraftPanel: a bench's opens when the player walks
 # up to it, crafting anywhere toggles with B. It crafts from the player's bag on
-# Play. We show an honest one-line note on what Pro adds, never a nag.
+# Play. We show an honest one-line note on what the full version adds, never a nag.
 
 const CRAFTING_SCRIPT := "res://addons/crafting_lite/crafting_lite.gd"
 const PANEL_SCRIPT := "res://addons/crafting_lite/craft_panel_lite.gd"
@@ -27,16 +27,16 @@ const NO_PLAYER := "Nothing in this scene is marked as the player yet, so this w
 enum Scope { SELECTED, THIS_SCENE }
 
 # Each outcome bakes in the same CraftingLite node — the difference is intent, so
-# the buyer lands on the right mental model (a station vs. the player). The Pro
-# note tells the truth about what Pro adds for that outcome.
+# the buyer lands on the right mental model (a station vs. the player). The full version
+# note tells the truth about what the full version adds for that outcome.
 const OUTCOMES := {
 	"bench": {
 		"label": "A crafting bench",
-		"pro": "Pro adds a styled recipe browser with icons, timed crafts with a queue, and a station id so each bench crafts only its own recipes.",
+		"pro": "The full version adds a styled recipe browser with icons, timed crafts with a queue, and a station id so each bench crafts only its own recipes.",
 	},
 	"anywhere": {
 		"label": "Player crafts anywhere",
-		"pro": "Pro adds a styled recipe browser with icons, timed crafts with a queue, shaped grid recipes and recipe unlocks.",
+		"pro": "The full version adds a styled recipe browser with icons, timed crafts with a queue, shaped grid recipes and recipe unlocks.",
 	},
 }
 
@@ -94,7 +94,7 @@ func _ready() -> void:
 	_status.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	root.add_child(_status)
 
-	# Honest funnel: what Pro adds on top of the picked outcome.
+	# Honest funnel: what the full version adds on top of the picked outcome.
 	_pro_note = Label.new()
 	_pro_note.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	_pro_note.modulate = Color(0.85, 0.8, 0.55)

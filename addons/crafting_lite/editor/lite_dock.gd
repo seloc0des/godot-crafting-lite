@@ -6,7 +6,7 @@ extends Control
 # checkbox, texture picker), so a non-coder authors the Lite resource without the
 # Inspector or hand-edited .tres. Lists of {item, count} named in ITEM_ROWS get
 # rows with an item picker; other arrays / dictionaries / sub-resources are left
-# to the Inspector (the Pro dock handles those, plus one-click scene wiring).
+# to the Inspector (the full dock handles those, plus one-click scene wiring).
 #
 # Shared body across the Lite tiers — only the CONFIG block differs per pack.
 
@@ -15,7 +15,7 @@ const RESOURCE_SCRIPT := preload("res://addons/crafting_lite/recipe.gd")
 const DEFAULT_DIR := "res://recipes"
 const DOCK_NAME := "Recipes (Lite)"
 const NEW_BASENAME := "new_recipe"
-const UPGRADE_LABEL := "Pro adds shaped grids, timed crafts with a queue, recipe unlocks and station ids + a styled recipe browser + the EventTrigger node."
+const UPGRADE_LABEL := "The full version adds shaped grids, timed crafts with a queue, recipe unlocks and station ids + a styled recipe browser + the EventTrigger node."
 const UPGRADE_URL := "https://selodev.itch.io/godot-crafting-system"
 # Lists of {item, count} edited as rows here, with the label each gets.
 const ITEM_ROWS := {"inputs": "Needs", "outputs": "Makes"}
@@ -134,7 +134,7 @@ func _build_ui() -> void:
 	up.modulate = Color(0.85, 0.8, 0.55)
 	up.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	root.add_child(up)
-	root.add_child(_button("Upgrade to Pro →", func(): OS.shell_open(UPGRADE_URL)))
+	root.add_child(_button("Upgrade to the full version →", func(): OS.shell_open(UPGRADE_URL)))
 	# EditorFileDialog is created lazily in _open_dialog — it's an editor-only
 	# class, so constructing it here would break any non-editor instantiation.
 
@@ -297,7 +297,7 @@ func _texture(prop: String, value: Variant) -> Control:
 
 func _deferred(kind: String) -> Label:
 	var l := Label.new()
-	l.text = "(%s: edit in Inspector. Pro authors this in-panel)" % kind
+	l.text = "(%s: edit in Inspector. The full version authors this in-panel)" % kind
 	l.modulate = HINT_COLOR
 	l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	return l
